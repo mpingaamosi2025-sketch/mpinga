@@ -1,0 +1,89 @@
+body{
+    background:url('IMG-20251223-WA0043.jpg');
+    background-size: cover;
+    background-color: linear-gradient(to top #000000d2,#000000b0);
+}
+
+.regist{
+    border:none;
+    border-radius: 30px;
+    width:500px ;
+    height: 600px;
+    position:relative;
+    top:20px;
+    left: 400px;
+    background-color:#000000ee;
+}
+
+.regist::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: conic-gradient(from var(--angle),rgb(209, 230, 23),rgb(0, 238, 255),rgb(160, 57, 185),rgb(223, 12, 12), rgb(255, 108, 230),rgba(28, 50, 241, 0.87),rgba(224, 224, 28, 0.753),orange);
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 10px;
+    border: 10px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin{
+    0%{
+        --angle:0deg;
+    }
+    100%{
+        --angle:360deg;
+    }
+}
+
+.regist::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+
+}
+
+h2{
+    font-size: 30px;
+    font-family:  Times, ;
+    text-align: center;
+    color:rgb(21, 223, 14);
+}
+
+label{
+    color: orange;
+    margin: 2px;
+    padding: 5px;
+    font-size: 20px;
+    font-family:'Times New Roman';
+}
+
+input{
+    border:#16b8e048;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background:#16b8e048;
+    border-top: none;
+    border-bottom: none;
+}
+
+.submit{
+    position:relative;
+    left: 150px;
+    width: 150px;
+}
+
+p{
+    color:rgb(21, 223, 14);
+    position: relative;
+    left: 10px;
+}
